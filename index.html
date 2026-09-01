@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritech</title>
+    <title>RITECHMED | Insumos y equipos médicos en El Salvador</title>
+    <meta name="description" content="RITECHMED: insumos médicos y terapia de presión negativa en El Salvador.">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="img/faviconritech.png" type="image/x-icon">
     <!-- Importar Font Awesome -->
@@ -13,7 +14,7 @@
 
     <!-- CSS de AOS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -22,11 +23,11 @@
 <div class="header-top">
     <div class="left-section">
         <a href="index.html"><img src="img/bandera-elsalvador.png" alt="El Salvador" class="flag-icon"></a>
-        <a href="index.html"><img src="img/logocolor.png" alt="Logo" class="logo"></a> <!-- Logo que se mostrará solo en responsive -->
+        <a href="index.html"><img src="img/logocolor.png" alt="RITECHMED" class="logo"></a> <!-- Logo que se mostrará solo en responsive -->
         <a href="index.html"><span>El Salvador</span></a>
     </div>
     <div class="right-section">
-        <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="contact-item" target="_blank">
+        <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="contact-item" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i>
             <span>WhatsApp</span>
         </a>
@@ -40,29 +41,29 @@
         </a>
     </div>
     <!-- Icono del menú para dispositivos móviles -->
-    <div class="menu-toggle" id="mobile-menu">
+    <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú de navegación" aria-controls="menu">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
 </div>
- 
-    
+
+
 <!-- Parte inferior del header con menú desplegable -->
 <div class="header-bottom">
-    <nav class="menu" id="menu">
+    <nav class="menu" id="menu" aria-label="Navegación principal">
         <a href="index.html" class="menu-item active">Inicio</a>
         <span class="separator"></span>
-        
+
         <a href="insumos.html" class="menu-item">Insumos Médicos</a>
         <span class="separator"></span>
-        
+
         <a href="clips.html" class="menu-item only-mobile">Clips quirúgicos</a> <!-- Clase agregada -->
         <span class="separator only-mobile"></span> <!-- El separador también se oculta en desktop -->
-        
+
         <a href="terapia.html" class="menu-item">Terapia al Vacío</a>
         <span class="separator"></span>
-        
+
         <a href="quienes.html" class="menu-item">¿Quiénes somos?</a>
     </nav>
 </div>
@@ -70,7 +71,7 @@
 
 
 <div class="footer-fix-nav">
-    <a href="home.html">
+    <a href="index.html">
         <i class="fas fa-home"></i>
         <span class="tooltip">Inicio</span>
     </a>
@@ -85,10 +86,10 @@
 </div>
 
 
-        
-        
-    </header>    
-    
+
+
+    </header>
+
     <!-- Hero Slider usando Swiper.js -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -106,7 +107,8 @@
 
     <!-- Aquí irá el contenido principal del cuerpo -->
     <main>
-        
+        <h1 class="visually-hidden">RITECHMED: insumos médicos en El Salvador</h1>
+
 
         <!-- Card de Nuestros Productos -->
 <section class="product-card-section" data-aos="fade-up" data-aos-duration="800">
@@ -114,7 +116,7 @@
     <div class="card first-card">
         <div class="card-left">
             <div class="mask"></div>
-            <img src="img/INSUMOS.png" alt="Producto">
+            <img src="img/INSUMOS.png" alt="Insumos médicos RITECH">
         </div>
         <div class="card-right">
             <h3>Lo que necesitas para cada procedimiento</h3>
@@ -125,7 +127,7 @@
                 <li>Medias antivarices</li>
                 <li>Y mucho más...</li>
             </ul>
-        
+
             <div class="buttons">
                 <a href="insumos.html" class="btn-details">
                     <i class="fas fa-file-alt"></i> VER CATÁLOGO
@@ -141,10 +143,10 @@
     <div class="card">
         <div class="card-left">
             <div class="mask"></div>
-            <img src="img/clips.png" class="imgclips" alt="Producto">
+            <img src="img/clips.png" class="imgclips" alt="Clips quirúrgicos RITECH">
         </div>
 
-        
+
         <div class="card-right">
             <h3>Conoce y adquiere nuestra variedad de Insumos Laparoscópicos</h3>
             <ul class="product-list">
@@ -168,7 +170,7 @@
     <div class="card">
         <div class="card-left">
             <div class="mask"></div>
-            <img src="img/presion.png" class="imgterapia" alt="Producto">
+            <img src="img/presion.png" class="imgterapia" alt="Equipo de terapia de presión negativa">
         </div>
         <div class="card-right">
             <h3>Descubre los muchos beneficios de nuestra Terapia</h3>
@@ -217,15 +219,15 @@
     <footer class="footer-down">
         <div class="columna">
             <div class="logo-footer">
-                <img src="img/logo.png" alt="Logo">
+                <img src="img/logo.png" alt="RITECHMED">
             </div>
             <p class="descripcion">
                 En Ritechmed, nos especializamos en proporcionar insumos médicos de la más alta calidad para el cuidado de la salud. Con más de 10 años de experiencia en el sector, trabajamos con los mejores proveedores para garantizar que nuestros clientes cuenten con productos confiables y efectivos para su práctica médica. Nos comprometemos a ofrecer soluciones innovadoras y accesibles, asegurando siempre el bienestar y la seguridad de los pacientes.
             </p>
             <div class="redes">
-                <a href="https://www.facebook.com/Ritech.sv/" class="facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/ritechmed.sv/" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/Ritech.sv/" class="facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ritechmed.sv/" class="instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="columna">
@@ -236,16 +238,7 @@
                 <!-- <li><a href="#">FAQs</a></li> -->
             </ul>
         </div>
-        <div class="columna">
-            <h4>Legales</h4>
-            <ul>
-                <li><a href="legales/politica-de-privacidad.html#politica-privacidad">Política de privacidad</a></li>
-                <li><a href="legales/politica-de-privacidad.html#terminos-condiciones">Términos y condiciones</a></li>
-                <li><a href="legales/politica-de-privacidad.html#politica-envios">Política de envíos</a></li>
-                <li><a href="legales/politica-de-privacidad.html#politica-devoluciones">Política de devoluciones</a></li>
-            </ul>
-        </div>
-    </footer>
+</footer>
 
     <footer class="footer-creditos">
         <div class="footer-line"></div>

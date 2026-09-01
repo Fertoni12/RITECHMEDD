@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritech</title>
-    <link rel="stylesheet" href="estilos/estilos_terapia.css">
+    <title>RITECHMED | Insumos y equipos médicos en El Salvador</title>
+    <meta name="description" content="RITECHMED: insumos médicos y terapia de presión negativa en El Salvador.">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <!-- Importar Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,7 +13,7 @@
     <!-- CSS de AOS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    
+
 </head>
 
 <body>
@@ -21,15 +22,15 @@
         <div class="header-top">
             <div class="left-section">
                 <a href="index.html"><img src="img/bandera-elsalvador.png" alt="El Salvador" class="flag-icon"></a>
-        <a href="index.html"><img src="img/logocolor.png" alt="Logo" class="logo"></a> <!-- Logo que se mostrará solo en responsive -->
+        <a href="index.html"><img src="img/logocolor.png" alt="RITECHMED" class="logo"></a> <!-- Logo que se mostrará solo en responsive -->
         <a href="index.html"><span>El Salvador</span></a>
             </div>
             <div class="right-section">
-                <a href="https://wa.me/numero" class="contact-item" target="_blank">
+                <a href="https://wa.me/50374905526" class="contact-item" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp</span>
                 </a>
-                <a href="tel:numero" class="contact-item">
+                <a href="tel:+50374905526" class="contact-item">
                     <i class="fas fa-phone"></i>
                     <span>Llamar</span>
                 </a>
@@ -39,16 +40,16 @@
                 </a>
             </div>
             <!-- Icono del menú para dispositivos móviles -->
-            <div class="menu-toggle" id="mobile-menu">
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú de navegación" aria-controls="menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
-    
+
         <!-- Parte inferior del header con menú desplegable -->
 <div class="header-bottom">
-    <nav class="menu" id="menu">
+    <nav class="menu" id="menu" aria-label="Navegación principal">
         <a href="index.html" class="menu-item active">Inicio</a>
         <span class="separator"></span>
         <a href="insumos.html" class="menu-item">Insumos Médicos</a>
@@ -73,10 +74,10 @@
                 <span class="tooltip">Terapia al Vacío</span>
             </a>
         </div>
-        
-        
-    </header>   
-    
+
+
+    </header>
+
     <div class="banner-terapia">
         <img src="img/terapia/bannerterapia.png" alt="Banner Terapia de Presión Negativa">
         <div class="overlay"></div>
@@ -84,7 +85,7 @@
       </div>
     <!-- Aquí irá el contenido principal del cuerpo -->
     <main>
-        
+
 
           <!-- CARD -->
 <div class="card">
@@ -93,27 +94,27 @@
     <h2 class="titulo-introduccion" data-aos="fade-down" data-aos-delay="100">
       ¿Qué es la <span class="resaltado">Terapia de Presión Negativa</span>?
     </h2>
-    
+
     <div class="descripcion-imagen-introduccion">
-      
+
       <div class="descripcion-texto-introduccion" data-aos="fade-right" data-aos-delay="200">
-        <p>La <strong>Terapia de Presión Negativa (TPN)</strong> es una técnica que utiliza 
-          <span class="resaltado">presión controlada</span> para acelerar la curación de heridas complejas, como 
-          <span class="resaltado">úlceras crónicas</span>, <span class="resaltado">quemaduras graves</span> y 
-          <span class="resaltado">heridas postquirúrgicas</span>. A través de la 
-          <strong>extracción de fluidos</strong> y la <span class="resaltado">estimulación de la circulación sanguínea</span>, 
-          promueve la regeneración del tejido, acelerando la curación y reduciendo el riesgo de 
+        <p>La <strong>Terapia de Presión Negativa (TPN)</strong> es una técnica que utiliza
+          <span class="resaltado">presión controlada</span> para acelerar la curación de heridas complejas, como
+          <span class="resaltado">úlceras crónicas</span>, <span class="resaltado">quemaduras graves</span> y
+          <span class="resaltado">heridas postquirúrgicas</span>. A través de la
+          <strong>extracción de fluidos</strong> y la <span class="resaltado">estimulación de la circulación sanguínea</span>,
+          promueve la regeneración del tejido, acelerando la curación y reduciendo el riesgo de
           <span class="resaltado">infecciones</span>.
         </p>
       </div>
-      
+
       <div class="imagen-introduccion" data-aos="fade-left" data-aos-delay="300">
         <img src="img/terapia/ilustracion-therapy.jpeg" alt="Imagen de Terapia de Presión Negativa" class="ilustracion-introduccion">
       </div>
-      
+
     </div>
   </section>
-  
+
 
            <!-- Caso de Éxito -->
 <section class="caso-exito" id="caso-exito" data-aos="fade-up">
@@ -122,10 +123,10 @@
   </h3>
 
   <div class="caso-content">
-    
+
     <div class="caso-descripcion" data-aos="fade-right" data-aos-delay="100"> <!-- Menor retraso -->
       <p class="descripcion-centro">
-        Don Ernesto, un paciente de 49 años, con pie diabético grado III, logró evitar la amputación gracias a nuestra Terapia de Presión Negativa. 
+        Don Ernesto, un paciente de 49 años, con pie diabético grado III, logró evitar la amputación gracias a nuestra Terapia de Presión Negativa.
         <br><br>
         Con un tratamiento intensivo y personalizado, la herida del paciente sanó en solo 4 semanas, demostrando la eficacia de esta terapia en casos graves. ¡Un testimonio de éxito que resalta la importancia de actuar a tiempo!
       </p>
@@ -135,7 +136,7 @@
 <div class="video-caso principal" data-aos="fade-left" data-aos-delay="150">
   <div class="video-container">
       <video controls>
-          <source src="img/terapia/video-caso-exito.mp4" type="video/mp4">
+          <source src="img/terapia/prueba.mp4" type="video/mp4">
           Tu navegador no soporta el video.
       </video>
   </div>
@@ -143,16 +144,16 @@
 
 <!-- Video para móviles (se mostrará solo en pantallas pequeñas, sin el contenedor adicional) -->
 <video class="video-caso movil" controls data-aos="fade-left" data-aos-delay="150">
-  <source src="img/terapia/video-caso-exito.mp4" type="video/mp4">
+  <source src="img/terapia/prueba.mp4" type="video/mp4">
   Tu navegador no soporta el video.
 </video>
 
-    
+
 
   </div>
 </section>
 
-  
+
 
 <!-- Beneficios -->
 <section class="seccion-beneficios" data-aos="fade-up" data-aos-duration="600">
@@ -258,7 +259,7 @@
       <div class="item" data-aos="zoom-in" data-aos-delay="100">
         <div class="icon">👩‍💻</div>
         <p>Soporte y capacitación</p>
-      </div>      
+      </div>
     </div>
 
     <!-- CTA final -->
@@ -268,8 +269,8 @@
 
     <!-- Botón -->
     <div class="cta-btn-container">
-      <a href="https://wa.me/50371602422?text=Hola%20estoy%20interesado%20en%20el%20servicio%20de%20terapia%20de%20presión%20negativa%20¿Podrían%20brindarme%20más%20información?" 
-         target="_blank" class="cta-btn">
+      <a href="https://wa.me/50371602422?text=Hola%20estoy%20interesado%20en%20el%20servicio%20de%20terapia%20de%20presión%20negativa%20¿Podrían%20brindarme%20más%20información?"
+         target="_blank" rel="noopener" class="cta-btn">
         Solicita información
       </a>
     </div>
@@ -279,7 +280,7 @@
 
 
 
-        
+
 <!-- Llamada a la Acción -->
 <!-- <section class="cta" data-aos="fade-up" data-aos-duration="600">
   <h2 class="titulo-centro">
@@ -289,7 +290,7 @@
       Incorpora la Terapia de Presión Negativa en tu práctica médica y ofrece una opción avanzada de recuperación.
   </p>
   <a href="https://wa.me/50371602422?text=Hola%20estoy%20interesado%20en%20el%20servicio%20de%20terapia%20de%20presión%20negativa%20¿Podrían%20brindarme%20más%20información?
-  " target="_blank" class="cta-btn" data-aos="zoom-in" data-aos-delay="100">
+  " target="_blank" rel="noopener" class="cta-btn" data-aos="zoom-in" data-aos-delay="100">
       Solicita información
   </a>
 </section> -->
@@ -327,7 +328,7 @@
 
           <!-- Animamos el botón, que es clave para la acción -->
           <a href="https://wa.me/50371602422?text=Hola%20estoy%20interesado%20en%20el%20servicio%20de%20terapia%20de%20presión%20negativa%20¿Podrían%20brindarme%20más%20información?"
-              class="info-button" target="_blank" data-aos="fade-up" data-aos-delay="150">
+              class="info-button" target="_blank" rel="noopener" data-aos="fade-up" data-aos-delay="150">
               <i class="fab fa-whatsapp"></i> MÁS INFORMACION
           </a>
       </div>
@@ -336,7 +337,7 @@
 
 
 
-        
+
     </main>
 
     <!-- Footer -->
@@ -365,15 +366,15 @@
     <footer class="footer-down">
         <div class="columna">
             <div class="logo-footer">
-                <img src="img/logo.png" alt="Logo">
+                <img src="img/logo.png" alt="RITECHMED">
             </div>
             <p class="descripcion">
                 En Ritechmed, nos especializamos en proporcionar insumos médicos de la más alta calidad para el cuidado de la salud. Con más de 10 años de experiencia en el sector, trabajamos con los mejores proveedores para garantizar que nuestros clientes cuenten con productos confiables y efectivos para su práctica médica. Nos comprometemos a ofrecer soluciones innovadoras y accesibles, asegurando siempre el bienestar y la seguridad de los pacientes.
             </p>
             <div class="redes">
-                <a href="https://www.facebook.com/Ritech.sv/" class="facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/ritechmed.sv/" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/Ritech.sv/" class="facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ritechmed.sv/" class="instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="columna">
@@ -384,16 +385,7 @@
                 <!-- <li><a href="#">FAQs</a></li> -->
             </ul>
         </div>
-        <div class="columna">
-            <h4>Legales</h4>
-            <ul>
-                <li><a href="legales/politica-de-privacidad.html#politica-privacidad">Política de privacidad</a></li>
-                <li><a href="legales/politica-de-privacidad.html#terminos-condiciones">Términos y condiciones</a></li>
-                <li><a href="legales/politica-de-privacidad.html#politica-envios">Política de envíos</a></li>
-                <li><a href="legales/politica-de-privacidad.html#politica-devoluciones">Política de devoluciones</a></li>
-            </ul>
-        </div>
-    </footer>
+</footer>
 
     <footer class="footer-creditos">
         <div class="footer-line"></div>
