@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/faviconritech.png" type="image/x-icon">
+    <!-- Importar Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@latest/css/fontisto/fontisto.min.css">
+
+    <!-- CSS de AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <!-- Parte superior del header -->
+<div class="header-top">
+    <div class="left-section">
+        <a href="index.html"><img src="img/bandera-elsalvador.png" alt="El Salvador" class="flag-icon"></a>
+        <a href="index.html"><img src="img/logocolor.png" alt="Logo" class="logo"></a> <!-- Logo que se mostrará solo en responsive -->
+        <a href="index.html"><span>El Salvador</span></a>
+    </div>
+    <div class="right-section">
+        <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="contact-item" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+50374905526" class="contact-item"> <!-- Cambia 'numero' por el número correcto -->
+            <i class="fas fa-phone"></i>
+            <span>Llamar</span>
+        </a>
+        <a href="mailto:ritechmed12@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>ritechmed12@gmail.com</span>
+        </a>
+    </div>
+    <!-- Icono del menú para dispositivos móviles -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+ 
+    
+<!-- Parte inferior del header con menú desplegable -->
+<div class="header-bottom">
+    <nav class="menu" id="menu">
+        <a href="index.html" class="menu-item active">Inicio</a>
+        <span class="separator"></span>
+        
+        <a href="insumos.html" class="menu-item">Insumos Médicos</a>
+        <span class="separator"></span>
+        
+        <a href="clips.html" class="menu-item only-mobile">Clips quirúgicos</a> <!-- Clase agregada -->
+        <span class="separator only-mobile"></span> <!-- El separador también se oculta en desktop -->
+        
+        <a href="terapia.html" class="menu-item">Terapia al Vacío</a>
+        <span class="separator"></span>
+        
+        <a href="quienes.html" class="menu-item">¿Quiénes somos?</a>
+    </nav>
+</div>
+
+
+
+<div class="footer-fix-nav">
+    <a href="home.html">
+        <i class="fas fa-home"></i>
+        <span class="tooltip">Inicio</span>
+    </a>
+    <a href="insumos.html">
+        <i class="fas fa-medkit"></i>
+        <span class="tooltip">Insumos Médicos</span>
+    </a>
+    <a href="terapia.html">
+        <i class="fa-solid fa-weight-scale"></i>
+        <span class="tooltip">Terapia al Vacío</span>
+    </a>
+</div>
+
+
+        
+        
+    </header>    
+    
+    <!-- Hero Slider usando Swiper.js -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('img/banner3.png');"></div>
+        <div class="swiper-slide" style="background-image: url('img/banner1.png');"></div>
+        <div class="swiper-slide" style="background-image: url('img/banner2.png');">
+            <a href="terapia.html#caso-exito" class="swiper-slide-link"></a>
+        </div>
+        <div class="swiper-slide" style="background-image: url('img/banner4.webp');"></div>
+    </div>
+    <!-- Paginación (puntos) -->
+    <div class="swiper-pagination"></div>
+</div>
+
+
+    <!-- Aquí irá el contenido principal del cuerpo -->
+    <main>
+        
+
+        <!-- Card de Nuestros Productos -->
+<section class="product-card-section" data-aos="fade-up" data-aos-duration="800">
+    <h2>Nuestros Productos</h2>
+    <div class="card first-card">
+        <div class="card-left">
+            <div class="mask"></div>
+            <img src="img/INSUMOS.png" alt="Producto">
+        </div>
+        <div class="card-right">
+            <h3>Lo que necesitas para cada procedimiento</h3>
+            <ul class="product-list">
+                <li>Campos quirúrgicos</li>
+                <li>Rollos adhesivos para heridas</li>
+                <li>Biofilm para recuperación de heridas y úlceras</li>
+                <li>Medias antivarices</li>
+                <li>Y mucho más...</li>
+            </ul>
+        
+            <div class="buttons">
+                <a href="insumos.html" class="btn-details">
+                    <i class="fas fa-file-alt"></i> VER CATÁLOGO
+
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Card de Clips Quirúrgicos -->
+<section class="product-card-section" data-aos="fade-right" data-aos-duration="800">
+    <div class="card">
+        <div class="card-left">
+            <div class="mask"></div>
+            <img src="img/clips.png" class="imgclips" alt="Producto">
+        </div>
+
+        
+        <div class="card-right">
+            <h3>Conoce y adquiere nuestra variedad de Insumos Laparoscópicos</h3>
+            <ul class="product-list">
+                <li>Clips de Titanio</li>
+                <li>Clips de Polímero <br>Hem-o-lock</li>
+                <li></li>
+            </ul>
+            <div class="buttons">
+                <a href="clips.html" class="btn-details">
+                    <i class="fas fa-file-alt"></i> VER CATÁLOGO
+
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Card de Terapia de Presión Negativa -->
+<section class="product-card-section" data-aos="fade-left" data-aos-duration="800">
+    <div class="card">
+        <div class="card-left">
+            <div class="mask"></div>
+            <img src="img/presion.png" class="imgterapia" alt="Producto">
+        </div>
+        <div class="card-right">
+            <h3>Descubre los muchos beneficios de nuestra Terapia</h3>
+            <ul class="product-list">
+                <li>Mejora la cicatrización de heridas</li>
+                <li>Reduce el tiempo de recuperación</li>
+                <li>Disminuye el riesgo de infección</li>
+                <li>Personal especializado a tu disposición</li>
+                <li>Y mucho más...</li>
+            </ul>
+            <div class="buttons">
+                <a href="terapia.html" class="btn-details">
+                    <i class="fas fa-info-circle"></i> VER MÁS INFORMACIÓN
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-up">
+        <div class="footer-item">
+            <div class="icon-circle">
+                <i class="fas fa-lock footer-icon fa-xl"></i>
+            </div>
+            <span class="footer-text">Compras seguras</span>
+        </div>
+        <div class="footer-item">
+            <div class="icon-circle">
+                <i class="fas fa-truck footer-icon"></i>
+            </div>
+            <span class="footer-text">Envíos a nivel nacional</span>
+        </div>
+        <div class="footer-item">
+            <div class="icon-circle">
+                <i class="ph-fill ph-seal-check footer-icon fa-2x"></i>
+            </div>
+            <span class="footer-text">Garantía transparente</span>
+        </div>
+    </footer>
+
+    <footer class="footer-down">
+        <div class="columna">
+            <div class="logo-footer">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <p class="descripcion">
+                En Ritechmed, nos especializamos en proporcionar insumos médicos de la más alta calidad para el cuidado de la salud. Con más de 10 años de experiencia en el sector, trabajamos con los mejores proveedores para garantizar que nuestros clientes cuenten con productos confiables y efectivos para su práctica médica. Nos comprometemos a ofrecer soluciones innovadoras y accesibles, asegurando siempre el bienestar y la seguridad de los pacientes.
+            </p>
+            <div class="redes">
+                <a href="https://www.facebook.com/Ritech.sv/" class="facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ritechmed.sv/" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/50374905526?text=Hola,%20quisiera%20obtener%20más%20información%20sobre%20insumos%20médicos." class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="columna">
+            <h4>Sobre Nosotros</h4>
+            <ul>
+                <li><a href="quienes.html">¿Quiénes somos?</a></li>
+                <li><a href="quienes.html">Contactos</a></li>
+                <!-- <li><a href="#">FAQs</a></li> -->
+            </ul>
+        </div>
+        <div class="columna">
+            <h4>Legales</h4>
+            <ul>
+                <li><a href="legales/politica-de-privacidad.html#politica-privacidad">Política de privacidad</a></li>
+                <li><a href="legales/politica-de-privacidad.html#terminos-condiciones">Términos y condiciones</a></li>
+                <li><a href="legales/politica-de-privacidad.html#politica-envios">Política de envíos</a></li>
+                <li><a href="legales/politica-de-privacidad.html#politica-devoluciones">Política de devoluciones</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <footer class="footer-creditos">
+        <div class="footer-line"></div>
+        <p class="footer-credit">Desarrollado por F5 Marketing © 2024 RITECH. Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- JS de AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // duración de la animación (ms)
+    once: true      // true: solo se anima una vez
+  });
+</script>
+    <script src="script.js" defer></script>
+</body>
+</html>

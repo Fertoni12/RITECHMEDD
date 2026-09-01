@@ -1,0 +1,1207 @@
+/* Importar la fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    padding-top: 90px; /* Mantén el padding en escritorio */
+    z-index: 1;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Ajuste en pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 0; /* Elimina el padding-top en dispositivos móviles */
+        margin-top: -55px;
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/fondomed.png'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px); /* Aplica un desenfoque de 8px a la imagen */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    opacity: 0.8; /* Ajusta la opacidad para suavizar el fondo */
+}
+
+
+/* Estilos generales para el header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    height: auto; /* Asegura que el header se ajuste al contenido */
+}
+
+
+
+
+/* Parte superior del header */
+.header-top {
+    background-color: #48A55C;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    animation: slideInDown 0.5s; /* Animación de entrada */
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.header-top .left-section,
+.header-top .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .left-section img.flag-icon {
+    width: 24px;
+    margin-right: 8px;
+}
+
+.header-top .left-section .logo {
+    display: none;
+}
+
+.header-top .left-section a span {
+    color: white;
+}
+
+.header-top .right-section .contact-item {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease; /* Transición para transformaciones */
+}
+
+.header-top .right-section .contact-item:hover {
+    color: #101a38;
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.header-top .right-section .contact-item i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el ícono de menú tipo hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que el icono esté visible por encima del menú */
+    gap: 0;
+    transition: color 0.3s ease-in-out, transform 0.3s ease; /* Transición para transformaciones */
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #001a4d;
+    border-radius: 2px;
+}
+
+/* Estilo para el ícono de menú tipo hamburguesa cuando el menú está activo */
+.menu-toggle.active span {
+    background-color: #333; /* Cambia el color de las líneas del ícono a un tono más oscuro */
+}
+
+/* Parte inferior del header */
+.header-bottom {
+    background-color: #E7F5FB;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del menú */
+.header-bottom .menu {
+    display: flex;
+    justify-content: center; /* Agrupa los ítems hacia el inicio */
+    flex-wrap: wrap;
+    transition: max-height 0.3s ease-in-out;
+    gap: 50px; /* Ajusta el espacio entre las opciones */
+}
+
+/* Menú activo para mostrarlo */
+.header-bottom.active .menu {
+    max-height: 300px; /* Ajustar según cuántos ítems haya */
+}
+
+/* Estilo para la opción activa del menú */
+.header-bottom .menu-item.active {
+    background-color: #217FE3; /* Cambiar el fondo para resaltar la opción activa */
+    color: #ffffff; /* Cambiar el color del texto si es necesario */
+}
+
+
+/* Estilo de los ítems del menú */
+.header-bottom .menu-item {
+    color: #217FE3;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out /* Transición para transformaciones */
+}
+
+.menu {
+    display: flex; /* Usamos flexbox para alinear horizontalmente las opciones */
+    justify-content: center; /* Centra el contenido del menú */
+    align-items: center; /* Alinea verticalmente las opciones */
+}
+
+.menu-item {
+    padding: 0 20px; /* Espaciado horizontal para las opciones */
+    text-decoration: none; /* Elimina el subrayado */
+    color: #217FE3; /* Color del texto */
+}
+
+.separator {
+    width: 2px; /* Ancho de la línea */
+    height: 25px; /* Altura de la línea */
+    background-color: rgba(206, 207, 209, 0.8); /* Color semitransparente */
+    transition: background-color 0.3s ease, height 0.3s ease; /* Suaviza el cambio de color y altura */
+}
+
+
+
+.header-bottom .menu-item:hover {
+    background-color: #217FE3;
+    color: #ffffff;
+    transform: scale(1.05); /* Efecto de aumento en hover */
+}
+
+.footer-fix-nav {
+    display: none; /* Oculta la barra de navegación por defecto */
+}
+
+
+/* Tamaños pequeños: smartphones */
+@media (max-width: 767px) {
+    .header-top {
+        padding: 10px 20px;
+        flex-direction: row; /* Asegura que todo esté en una fila */
+        justify-content: space-between; /* Espaciado entre los elementos */
+        font-size: 10px; /* Reduce el tamaño de la fuente en general */
+        background-color: #E7F5FB;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* .header-top .left-section img.flag-icon {
+        width: 25px;
+    }
+
+    .header-top .left-section a span {
+        font-size: 12px;
+    } */
+
+    .header-top .left-section img.flag-icon {
+        display: none; /* Oculta la bandera */
+    }
+
+    .header-top .left-section a span {
+        display: none; /* Oculta la palabra "El Salvador" */
+    }
+
+        /* Mostrar solo el logo a la izquierda en dispositivos pequeños */
+        .header-top .left-section .logo {
+            display: block; /* Muestra el logo en pantallas pequeñas */
+            width: auto; /* Ajusta automáticamente el tamaño del logo */
+            max-width: 100px; /* Limita el tamaño máximo del logo */
+        }
+
+    /* Ocultar los íconos de contacto en dispositivos pequeños */
+    .header-top .right-section .contact-item {
+        display: none; /* Oculta los íconos de contacto */
+    }
+
+    /* Mostrar solo el logo a la izquierda y el toggle del menú a la derecha */
+    .menu-toggle {
+        display: flex; /* Mostrar ícono hamburguesa en móviles */
+        width: 25px;  /* Ajusta el tamaño del icono */
+        height: 20px; /* Ajusta el tamaño del icono */
+        transition: transform 0.3s ease; /* Efecto suave al abrir/cerrar el menú */
+    }
+
+    .menu-toggle span {
+        height: 3px; /* Ajusta el grosor de las líneas */
+    }
+
+    .header-bottom {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Inicialmente oculto fuera de la pantalla */
+        width: 250px; /* Ajusta el ancho del menú lateral */
+        height: 100vh; /* El menú ocupará toda la altura */
+        background-color: #E7F5FB;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out; /* Transición suave */
+        padding-top: 60px; /* Espacio para el header superior */
+        z-index: 999;
+    }
+
+    .header-bottom .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        gap: 0;
+    }
+
+    .header-bottom .menu-item {
+        font-size: 16px; /* Reduce el tamaño de los ítems del menú */
+        margin: 8px 0; /* Espaciado más pequeño */
+        width: 100%; /* Ocupar todo el ancho del menú */
+        text-align: left;
+    }
+
+    /* Cuando el menú está activo (abierto) */
+    .header-bottom.active {
+        right: 0; /* Mostrar el menú */
+    }
+/* Fija la barra de navegación en el pie de la página para móviles */
+.footer-fix-nav {
+    display: flex; /* Muestra la barra de navegación en pantallas de 990px o menos */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* Color de fondo */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra en la parte superior */
+    justify-content: space-around; /* Espacio igual entre íconos */
+    padding: 10px 0; /* Espaciado vertical */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.footer-fix-nav a {
+    text-align: center; /* Centra el texto e íconos */
+    color: #9b9b9b; /* Color del texto */
+    font-weight: 500;
+    flex: 1; /* Cada ícono ocupa el mismo espacio */
+    position: relative; /* Necesario para el tooltip */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.footer-fix-nav a i {
+    font-size: 21px; /* Tamaño del ícono */
+    padding: 10px 7px; /* Espaciado alrededor del ícono */
+    display: block; /* Hace que el ícono se muestre como un bloque */
+    transition: transform 0.3s; /* Transición suave al hacer hover */
+}
+
+
+
+
+.footer-fix-nav a:hover {
+    color: #0090C3; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilo para el tooltip */
+.footer-fix-nav a .tooltip {
+    display: none; /* Oculta el tooltip por defecto */
+    position: absolute; /* Posiciona el tooltip */
+    bottom: 100%; /* Lo coloca arriba del ícono */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Centra el tooltip */
+    background-color: #333; /* Fondo del tooltip */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    white-space: nowrap; /* Evita que el texto se divida */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s; /* Transición suave para la opacidad */
+}
+
+/* Muestra el tooltip al pasar el mouse */
+.footer-fix-nav a:hover .tooltip {
+    display: block; /* Muestra el tooltip */
+    opacity: 1; /* Hace el tooltip visible */
+}
+
+.footer-fix-nav a:hover i {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el mouse */
+    transition: transform 0.3s; /* Suaviza la transición */
+    transform: translateY(-5px); /* Efecto de movimiento hacia arriba en hover */
+}
+
+.separator {
+    display: none;
+}
+
+}
+
+/* Oculta los elementos por defecto */
+.only-mobile {
+    display: none;
+}
+
+/* Muestra los elementos solo en dispositivos móviles */
+@media (max-width: 767px) {
+    .only-mobile {
+        display: inline-block; /* o flex según el caso */
+    }
+
+    .separator {
+        display: none; /* Oculta el separador en móviles */
+    }
+}
+
+
+
+
+
+/* Tamaños medianos: tablets */
+@media (min-width: 760px) and (max-width: 1024px) {
+    .header-top {
+        padding: 10px 15px;
+    }
+
+    .header-top .left-section img.flag-icon {
+        width: 20px;
+    }
+
+    .header-bottom .menu-item {
+        font-size: 18px;
+    }
+
+    .header-bottom .menu {
+        gap: 10px;
+    }
+    
+}
+
+/* Media Query para reducir el gap entre 1027px y 1069px */
+@media (max-width: 1080px) and (min-width: 1022px) {
+    .header-bottom .menu {
+        gap: 40px; /* Ajusta el espacio entre las opciones en este rango */
+    }
+    
+}
+
+
+/* ___________________________ */
+/* BANNER */
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 65vh; /* Igual que en el slider original */
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra en la parte inferior */
+}
+
+.swiper-slide-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Asegura que el enlace esté encima del contenido */
+}
+
+
+/* Wrapper */
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave entre slides */
+}
+
+/* Slide */
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Slide activo */
+.swiper-slide-active {
+    opacity: 1;
+    transition: opacity 1s ease;
+    animation: zoomInOut 10s ease-in-out infinite;
+}
+
+/* Animación de zoom suave */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Sin zoom */
+    }
+    50% {
+        transform: scale(1.05); /* Leve zoom */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al estado inicial */
+    }
+}
+
+/* Paginación */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    width: auto;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #c2c1c1;
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #217FE3;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .swiper-container {
+        height: 35vh; /* Aumenta la altura para que baje más en la pantalla */
+        margin-bottom: 40px; /* Puedes ajustar este valor para moverlo aún más abajo */
+        margin-top: 60px; /* Agregar margen superior si deseas que baje un poco más */
+    }
+
+    .swiper-slide-active {
+        animation: none;
+    }
+
+    .swiper-pagination {
+        bottom: 15px;
+
+    }
+
+    .swiper-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+
+
+
+
+/* ______________________________________________ */
+
+/* Estilos generales que se mantienen igual para pantallas grandes */
+.product-card-section {
+    padding: 20px;
+    background-color: #ffffff6a;
+    text-align: center;
+    margin: 0 auto; /* Centra la sección */
+    padding-left: 5vw; /* Márgenes laterales responsivos */
+    padding-right: 5vw; /* Márgenes laterales responsivos */
+    max-width: 1300px;  /* Ajusta el ancho máximo del contenido */
+}
+
+.product-card-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #0090C3;
+    display: inline-block; /* Necesario para que el transform funcione correctamente */
+    animation: zoom 2s infinite; /* Duración de la animación */
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.1); /* Zoom leve hacia arriba */
+    }
+}
+
+
+.card {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    height: auto; /* Ahora el alto es dinámico */
+    background-color: #E7F5FB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+
+/* Mantén el código base de la tarjeta */
+.card-left {
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1 / 1; /* Mantienes la forma cuadrada sin height fijo */
+    overflow: visible;
+}
+
+/* Modificación de la máscara para hacerla responsiva */
+.mask {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    padding-top: 85%; /* Mantiene la proporción cuadrada */
+    background-color: #fff;
+    transform: translate(-50%, -50%) rotate(40deg);
+    transform-origin: center;
+    z-index: 0;
+    border-radius: 110px;
+}
+
+
+.card-left img {
+    width: 90%; /* Ancho de la imagen */
+    height: auto; /* Altura de la imagen */
+    object-fit: cover; /* Cambia a cover para evitar recortes */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Imagen encima del rombo */
+}
+
+
+.card-left .imgterapia, .card-left .imgclips {
+    width: 80%; /* Ancho de la imagen */
+    height: auto; /* Altura de la imagen */
+    object-fit: cover; /* Cambia a cover para evitar recortes */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Imagen encima del rombo */
+}
+
+.card-right {
+    width: 50%;
+    padding: 2vw; /* Ajusta el padding de forma responsiva */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+.card-right h3 {
+    color: #0090C3;
+    font-size: 3vw; /* Tamaño del título relativo al ancho del viewport */
+    font-weight: bold;
+    margin-bottom: 2vw;
+    margin-right: 2vw;
+    text-align: left;
+}
+
+.card-right p {
+    color: #79747E;
+    font-size: 1.6vw; /* Tamaño del texto relativo al ancho del viewport */
+    font-weight: normal;
+    margin-right: 2vw;
+    margin-bottom: 1.5vw;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* _________________primera card______________________ */
+
+.product-list {
+    list-style: none; /* Quitamos la viñeta por defecto */
+    padding: 0;
+    margin: 0 20px 0; /* Ajusta el margen inferior de la lista si lo necesitas */
+    padding-right: 60px;
+    text-align: left; /* Alineación de los items a la izquierda */
+}
+
+.product-list li {
+    position: relative;
+    padding-left: 20px; /* Espacio para el guion */
+    margin-bottom: 15px; /* Más espacio entre cada item */
+    font-size: 1.2vw; /* O el tamaño que se vea mejor para ti */
+    color: #79747E;
+    line-height: 1.4;
+    cursor: default; /* Evita que se vea como un enlace */
+    text-decoration: none; /* Quita subrayado en caso de que haya alguno */
+}
+
+.product-list li::before {
+    content: "-"; /* Guion personalizado */
+    position: absolute;
+    left: 0;
+    color: #79747E; /* Cambia el color del guion si quieres */
+}
+
+/* No agregar guion al último item */
+.product-list li:last-child::before {
+    content: ""; /* Elimina el guion para el último item */
+}
+
+
+
+
+
+
+/* _______________fin________________________ */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
+    gap: 2vw;
+    margin-top: 1vw;
+    align-items: center;
+}
+
+.btn-whatsapp, .btn-details {
+    display: flex;
+    align-items: center;
+    padding: 1vw 3vw; /* Ajusta el padding según el tamaño del viewport */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5vw; /* Tamaño del texto del botón */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-whatsapp {
+    background-color: #30D18B;
+}
+
+.btn-details {
+    background-color: #56B5D8;
+}
+
+.btn-whatsapp i, .btn-details i {
+    margin-right: 0.8vw;
+    font-size: 2vw; /* Tamaño del ícono relativo al ancho del viewport */
+}
+
+/* Efecto al pasar el mouse */
+.btn-whatsapp:hover, .btn-details:hover {
+    transform: scale(1.05);
+}
+
+/* ________________ Media Queries para pantallas pequeñas ________________ */
+
+/* Ajustes para pantallas pequeñas - max-width 768px */
+@media screen and (max-width: 768px) {
+    
+    .card {
+        flex-direction: column;
+        height: auto; /* Altura automática para adaptarse al contenido */
+        padding: 50px 0; /* Espaciado interno */
+        box-sizing: border-box;
+    }
+
+    /* Solo quitar el padding a la tarjeta con la clase 'first-card' */
+    .product-card-section .first-card {
+        padding-top: 0; /* Elimina el padding solo a la primera card */
+    }
+
+    .card-left {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .card-left img {
+        display: block;
+        width: 100%;
+        height: auto; /* Mantiene las proporciones */
+        margin: 0; /* Asegura que no haya márgenes innecesarios */
+        padding: 0; /* Elimina cualquier padding */
+        object-fit: cover; /* Hace que la imagen cubra el espacio disponible sin deformarse */
+    }
+
+    .card-left .imgterapia, 
+    .card-left .imgclips {
+        display: block;
+        width: 80%;
+        height: auto; /* Mantiene las proporciones */
+        margin: 0; /* Asegura que no haya márgenes innecesarios */
+        padding: 0; /* Elimina cualquier padding */
+        object-fit: cover; /* Hace que la imagen cubra el espacio disponible sin deformarse */
+    }
+
+    .card.in-view  {
+        padding-top: 20px;
+    }
+
+    .card.first-card.in-view {
+        padding-top: 0;
+    }
+
+    .mask {
+        display: none; /* Oculta la máscara en móviles */
+    }
+
+    .card-right {
+        width: 100%;
+        padding: 0 40px; /* Espaciado para que no se pegue */
+        box-sizing: border-box;
+    }
+
+    .card-right h3 {
+        font-size: 6vw; /* Ajuste del tamaño del texto para móviles */
+        margin-right: 0;
+    }
+
+    .card-right p {
+        font-size: 4vw; /* Tamaño de texto adaptado */
+        margin-right: 0;
+    }
+
+    .buttons {
+        justify-content: center; /* Centra los botones */
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn-whatsapp, 
+    .btn-details {
+        font-size: 4vw; /* Tamaño de texto del botón adaptado */
+        padding: 10px 20px; /* Padding más manejable */
+    }
+
+    .btn-whatsapp i, 
+    .btn-details i {
+        font-size: 5vw;
+        margin-right: 8px;
+    }
+
+    .product-list li {
+        font-size: 4vw; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        margin-bottom: 10px; /* Reduce el espacio entre los items */
+    }
+}
+
+    
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .product-list li {
+        font-size: 5vw; /* Aumenta un poco el tamaño de la fuente en pantallas muy pequeñas */
+        margin-bottom: 8px; /* Reduce aún más el espacio entre los items */
+    }
+
+    .product-list {
+        margin: 0 10px; /* Menor margen en pantallas muy pequeñas */
+        padding-right: 40px; /* Menos padding en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+  
+    .card {
+      overflow: hidden;
+    }
+  
+    .card-left img, .card-left .imgterapia, .card-left .imgclips {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .card-right {
+      padding: 0 20px; /* Reduce a la mitad para testear */
+    }
+  
+    .product-list {
+      padding: 0;
+      margin: 0 10px;
+    }
+  }
+                  
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 1200px) {
+    .mask {
+        top: 50%; /* Alinea verticalmente la máscara al centro */
+        left: 5%; /* Ajusta la posición para que no esté fuera de la tarjeta */
+        width: 40vw; /* Reduce el tamaño de la máscara */
+        height: 40vw; /* Mantiene la proporción cuadrada */
+        transform: translate(-50%, -50%) rotate(40deg); /* Ajusta el desplazamiento */
+    }
+
+    .card-left img {
+        width: 100%; /* Reduce el tamaño de la imagen */
+        height: auto;
+    }
+
+    .card-right {
+        padding: 2vw; /* Reduce el padding */
+    }
+
+    .card-right h3 {
+        font-size: 1.8vw; /* Reduce el tamaño del título */
+    }
+
+    .card-right p {
+        font-size: 1.2vw; /* Reduce el tamaño del texto */
+    }
+
+    .buttons {
+        gap: 1vw; /* Reduce el espacio entre botones */
+    }
+
+    .btn-whatsapp, .btn-details {
+        padding: 1vw 2vw; /* Reduce el padding de los botones */
+        font-size: 0.9vw; /* Reduce el tamaño del texto en los botones */
+    }
+
+    .btn-whatsapp i, .btn-details i {
+        font-size: 1.4vw; /* Reduce el tamaño de los íconos */
+    }
+}
+
+/* ANIMACIONES CARDS */
+/* Estilo base para las tarjetas */
+.card {
+    opacity: 0; /* Oculta inicialmente */
+    transform: translateY(50px); /* Mueve hacia abajo más visible */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Transición más suave */
+}
+
+/* Estilo cuando la tarjeta entra en vista */
+.card.in-view {
+    opacity: 1; /* Aparece */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+
+
+
+/* FOOTER COMPLETO */
+/* ___________________________ */
+/* FOOTER UP */
+.footer-up {
+    background-color: #2CA3CD;
+    color: white;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.1rem solid white;
+    margin-top: 30px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.footer-item:hover {
+    transform: scale(1.02);
+}
+
+.icon-circle {
+    background-color: #83C9F0;
+    border-radius: 50%;
+    width: 45px; /* Ajustado para asegurar que sea circular */
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    flex-shrink: 0; /* Evita que se deforme */
+}
+.footer-icon {
+    font-size: 23px;
+    color: white;
+}
+
+.footer-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* FOOTER DOWN */
+.footer-down {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #2CA3CD;
+    color: white;
+    padding: 40px 80px 10px;
+    flex-wrap: wrap;
+}
+
+.columna {
+    flex: 1;
+    max-width: 300px;
+    margin: 0 10px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-down .columna .logo-footer {
+    text-align: center;
+}
+
+.logo-footer img {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+footer .redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px 10px;
+    font-size: 25px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.redes a.facebook:hover {
+    background-color: #3b5998;
+}
+
+.redes a.instagram:hover {
+    background-color: #e4405f;
+}
+
+.redes a.whatsapp:hover {
+    background-color: #25d366;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+ul li a:hover {
+    color: #101a38;
+}
+
+.footer-line {
+    width: 80%;
+    border-bottom: 0.1rem solid white;
+    margin: 15px auto;
+}
+
+.footer-creditos {
+    text-align: center;
+    padding: 1px 0 15px;
+    background-color: #2CA3CD;
+    color: white;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    /* FOOTER UP */
+    .footer-up {
+        padding: 20px 10px;  /* Aumentar el padding para que no quede tan pegado al borde */
+    }
+
+    .icon-circle {
+        width: 45px; /* Aumentado */
+        height: 45px; /* Aumentado */
+        margin-right: 6px;  /* Ajuste del margen */
+    }
+
+    .footer-icon {
+        font-size: 22px; /* Aumentado */
+    }
+
+    .footer-text {
+        font-size: 16px; /* Aumentado */
+    }
+
+    /* FOOTER DOWN */
+    .footer-down {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center; /* Centrado de texto */
+    }
+
+    .footer-down .columna {
+        margin-top: 10px;
+        padding: 0 20px;
+        max-width: 90%;
+        text-align: center; /* Centrado de contenido en las columnas */
+    }
+
+    .logo-footer img {
+        max-width: 120px; /* Aumentado */
+    }
+
+    .descripcion {
+        font-size: 14px; /* Aumentado */
+        padding-bottom: 0;
+    }
+
+    footer .redes {
+        display: flex; /* Cambié aquí, ahora las redes se alinearán horizontalmente */
+        justify-content: center; /* Centrado de los iconos */
+        gap: 10px; /* Espacio entre iconos */
+    }
+
+    footer .redes a {
+        width: 35px; /* Aumentado */
+        height: 35px; /* Aumentado */
+        font-size: 18px; /* Aumentado */
+        display: flex;  /* Centrado del icono */
+        justify-content: center;  /* Centrado horizontal */
+        align-items: center;  /* Centrado vertical */
+    }
+
+    h4 {
+        font-size: 18px; /* Aumentado */
+    }
+
+    ul li a {
+        font-size: 14px; /* Aumentado */
+    }
+
+    .footer-creditos {
+        font-size: 14px; /* Aumentado */
+        margin-bottom: 60px;
+    }
+
+    /* Ajuste para íconos y texto en móvil */
+    .footer-item {
+        justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
+        text-align: left;  /* Ajuste de texto */
+    }
+}
+
+@media (max-width: 480px) {
+    /* FOOTER UP */
+    .footer-up {
+        padding: 20px 15px;  /* Más espacio en los bordes */
+    }
+
+    .icon-circle {
+        width: 40px; /* Aumentado */
+        height: 40px; /* Aumentado */
+        margin-right: 5px;  /* Ajuste del margen */
+    }
+
+    .footer-icon {
+        font-size: 20px; /* Aumentado */
+    }
+
+    .footer-text {
+        font-size: 12px; /* Aumentado */
+    }
+
+    /* FOOTER DOWN */
+    .footer-down {
+        padding: 10px 0;
+        text-align: center; /* Centrado de texto */
+    }
+
+    .footer-down .columna {
+        margin-top: 10px;
+        text-align: center; /* Centrado de contenido en las columnas */
+    }
+
+    footer .redes {
+        display: flex; /* Cambié aquí, ahora las redes se alinearán horizontalmente */
+        justify-content: center; /* Centrado de los iconos */
+        gap: 8px; /* Espacio entre iconos */
+    }
+
+    footer .redes a {
+        width: 30px; /* Aumentado */
+        height: 30px; /* Aumentado */
+        font-size: 15px; /* Aumentado */
+        display: flex;  /* Centrado del icono */
+        justify-content: center;  /* Centrado horizontal */
+        align-items: center;  /* Centrado vertical */
+    }
+
+    /* Ajuste para íconos y texto en pantallas pequeñas */
+    .footer-item {
+        justify-content: flex-start; /* Alineación a la izquierda */
+        text-align: left;
+    }
+}
+
+
